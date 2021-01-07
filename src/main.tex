@@ -1,0 +1,165 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage[export]{adjustbox}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning,shapes.gates.logic.US}
+\usetikzlibrary {positioning}
+\usetikzlibrary {arrows.meta,automata,positioning,shadows}
+
+\colorlet{beamer@blendedblue}{blue!60!black}
+
+
+\title{Assignment 11}
+\subtitle{Solution to GATE EC2017, question 43}
+\author{Perisetti Sai Ram Mohan Rao}
+\institute{IIIT Raichur}
+\date{\today}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+\section{Question}
+\begin{frame}{Question}
+The state diagram of Finite State Machine (FSM) desgined to detect an overlapping sequence of three bits as shown in figure. The FSM has an input 'In' and an output 'Out'.The intial state of FSM is $S_0$ .
+
+\begin{figure}[h]
+\centering
+\scalebox{0.5}{
+\input{figure/figure1.tex}}
+\caption{}
+\label{figure 1}
+\end{figure}
+
+If the input sequence is 10101101001101, starting with leftmost bit,then how many number of times 'Out' will be 1 is \rule{2cm}{0.10mm}
+\end{frame}
+
+\section{Solution}
+
+\subsection{Pretext}
+\begin{frame}{Solution / Pretext}
+We are requried to find output sequence of Finite State Machine(FSM) and number 1's in output sequence.
+
+\begin{figure}[h]
+    \centering
+    \scalebox{0.6}{
+    \input{figure/figure2.tex} }
+    %\caption{\textit{Question figure}}
+    \label{fig:ques_}
+\end{figure}
+If the CLK is not applied,there will be no differnce between input sequence and the output sequence.
+
+The mechanism that should take place in Finite state machine is mentioned in Figure 1.
+
+\end{frame}
+
+\subsection{Explanation}
+\begin{frame}{Solution / Explanation}
+\begin{columns}
+\vspace{-0.05cm} % "\vspace" used to align picture vertically, preventing overflow
+\column{0.5\textwidth}
+\begin{figure}[h]
+    \scalebox{0.6}{
+    \input{figure/figure3.tex} }
+    %\caption{\textit{Question figure}}
+    \label{fig:ques_}
+\end{figure}.
+\column{0.5\textwidth}
+In the finite machine we are requried to find the output in current state for corresponding input .We have to see Input value at current state to get the Output.For example if we are at current state $S_0$ with input=1 then Output =0 and state changes to $S_1$.
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Solution / Explanation}
+\begin{columns}
+\vspace{-0.05cm} % "\vspace" used to align picture vertically, preventing overflow
+\column{0.5\textwidth}
+\begin{figure}[h]
+    \scalebox{0.6}{
+    \input{figure/figure4.tex} }
+    %\caption{\textit{Question figure}}
+    \label{fig:ques_}
+\end{figure}.
+\column{0.5\textwidth}
+We are now looking at another example.If the current state of FSM is $S_2$ with input=0
+then it gives output=0 and state changes to $S_0$.
+
+We are requried to find complete output sequence of FSM as stated in question.Which is made a table in next slide.  
+
+
+
+
+\end{columns}
+\end{frame}
+
+\subsection{State Transition Table}
+\begin{frame}{Solution / State Transition Table}
+    \begin{table}[h]
+    \centering
+    \scalebox{0.8}{
+    \input{tables/State Transition Table.tex}}
+    \caption{Table for States,Input and Output of finite state machine}
+    \label{table}
+\end{table}
+\end{frame}
+
+\subsection{Conclusion}
+\begin{frame}{Solution / Conclusion}
+\begin{figure}[h]
+\centering
+\scalebox{0.6}{
+\input{figure/figure5.tex}}
+\caption{}
+\label{figure 1}
+\end{figure}
+
+
+    \begin{table}[h]
+    \centering
+    \scalebox{0.8}{
+    \input{tables/table1.tex}}
+    \caption{Table for States,Input and Output of finite state machine}
+    \label{table}
+\end{table}
+
+The Output sequence of FSM is 00101001000001 from Table 1. \\
+Then number of times 'Out' will be 1 is 4
+
+\centering 
+Answer = 4
+
+\end{frame}
+
+\section{Annexure}
+
+\begin{frame}{Annexure}
+    The behavior of state machines can be observed in many devices in modern society that perform a predetermined sequence of actions depending on a sequence of events with which they are presented. \\
+    Vending machines, which dispense products when the proper combination of coins is deposited.\\
+    Elevators, whose sequence of stops is determined by the floors requested by riders \\
+    Traffic lights, which change sequence when cars are waiting. \\
+    Combination locks, which require the input of a sequence of numbers in the proper order.
+    
+\end{frame}
+
+\begin{frame}
+    \centering
+    \textit{Thank you.}
+\end{frame}
+
+\end{document}
