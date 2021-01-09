@@ -1,0 +1,36 @@
+\begin{tabular}{ |p{1cm}|p{1cm}|p{1cm}|p{1cm}| }
+\hline
+\multicolumn{4}{|c|}{State Transition Table} \\
+\hline
+Present state & Input & Next state & Output  \\
+\hline
+ $00$ & 1 & $01$ &0 \\
+\hline
+$01$ & 0 & $10$  &0\\
+\hline
+$10$ & 1 & $11$  &1\\
+\hline
+$11$ & 0 & $10$  &0\\
+\hline
+$10$ & 1 & $11$  &1\\
+\hline
+$11$ & 1 & $01$  &0\\
+\hline
+$01$ & 0 & $10$  &0\\
+\hline
+$10$ & 1 & $11$  &1\\
+\hline
+$11$ & 0 & $10$  &0\\
+\hline
+$10$ & 0 & $00$  &0\\
+\hline
+$00$ & 1 & $01$  &0\\
+\hline
+$01$ & 1 & $01$  &0\\
+\hline
+$01$ & 0 & $10$  &0\\
+\hline
+$10$ & 1 & $11$  &1\\
+\hline
+
+\end{tabular}
